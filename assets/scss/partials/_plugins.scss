@@ -1,0 +1,54 @@
+
+/*--------------------------------------------------------------
+RESERVATION FORM
+--------------------------------------------------------------*/
+
+.rtb-booking-form {
+	text-align: center;
+	legend {
+		text-align: center; border: none; text-transform: uppercase; font-size: 18px; font-weight: 600; margin-bottom: 40px;
+	}
+	.contact,
+	.reservation {
+		text-align: start; margin-left: -30px; margin-right: -30px; margin-bottom: 80px;
+		@include clearfix();
+		> div {float: left; margin: 0 30px; width: calc( ( 100% / 3 ) - 60px);}
+	}
+	.reservation {}
+	.contact {
+		.add-message {
+			text-align: center; width: 100%; margin: 40px auto 0; font-size: 16px;
+			a {
+				border-bottom:2px solid rgba(black, .1);
+			}
+		}
+		.rtb-textarea.message-open {
+			width: calc(100% - 60px); margin: 0 30px; float: none;
+		}
+	}
+	.rtb-text input,
+	.rtb-textarea textarea {
+		@include form-control;
+		max-width:100%;
+	}
+	.rtb-select select {
+		@include wc-select-list; width: 100%;
+	}
+	button[type="submit"] {
+		@include btn;
+		@include btn-primary;
+		// @include btn-primary;
+		margin:0 auto;
+	}
+	label {
+		text-transform: uppercase; font-size: 12px; line-height: 1; margin-bottom: 10px;
+	}
+
+}
+
+@media (max-width:768px){
+	.rtb-booking-form .contact > div, .rtb-booking-form .reservation > div {
+		width:100%;
+		margin:0 0 15px 0;
+	}
+}

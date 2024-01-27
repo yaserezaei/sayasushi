@@ -1,0 +1,24 @@
+.dn-breadcrumbs {
+	padding: 20px 0;
+	&.dn-breadcrumbs--headerRelative {}
+	&.dn-breadcrumbs--headerAbsolute {padding-top: #{$header_main_height}px;}
+
+	ul { @include list-reset; }
+	ul:not(:empty) {margin-bottom: 20px; }
+
+	li {display: inline-block; font-size: 11px; text-transform: uppercase;}
+	li:before{ display: inline-block; margin:0 7px;}
+	li:not(:first-of-type):before{content:"\002F";}
+
+	/* Light */
+	&.dn-breadcrumbs--light li {color:rgba($w,0.5);}
+	&.dn-breadcrumbs--light li a {color:rgba($w,0.85);}
+	&.dn-breadcrumbs--light li a:hover {color:$w;}
+
+	/* Minimal Breadcrumbs - Dark */
+	&.dn-breadcrumbs--dark li {color: rgba($b, 0.5);}
+	&.dn-breadcrumbs--dark li a {color: rgba($b, 0.8);}
+	&.dn-breadcrumbs--dark li a:hover {color:$b;}
+}
+
+.dn-breadcrumbsSep {border:0; height:2px; background-color: darken($w, 15); margin: 0; }

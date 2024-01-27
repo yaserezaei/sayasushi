@@ -1,0 +1,92 @@
+<wpml-config>
+    <admin-texts>
+        <key name="dannys_theme_options">
+            <key name="general_options">
+                <key name="header_social_icons" >
+                    <key name="0" >
+                        <key name="title" />
+                        <key name="link" >
+                            <key name="url" />
+                            <key name="title" />
+                        </key>
+                    </key>
+                    <key name="1" ><key name="title" /><key name="link" ><key name="url" /><key name="title" /></key></key>
+                    <key name="2" ><key name="title" /><key name="link" ><key name="url" /><key name="title" /></key></key>
+                    <key name="3" ><key name="title" /><key name="link" ><key name="url" /><key name="title" /></key></key>
+                    <key name="4" ><key name="title" /><key name="link" ><key name="url" /><key name="title" /></key></key>
+                    <key name="5" ><key name="title" /><key name="link" ><key name="url" /><key name="title" /></key></key>
+                    <key name="6" ><key name="title" /><key name="link" ><key name="url" /><key name="title" /></key></key>
+                    <key name="7" ><key name="title" /><key name="link" ><key name="url" /><key name="title" /></key></key>
+                    <key name="8" ><key name="title" /><key name="link" ><key name="url" /><key name="title" /></key></key>
+                    <key name="9" ><key name="title" /><key name="link" ><key name="url" /><key name="title" /></key></key>
+                    <key name="10" ><key name="title" /><key name="link" ><key name="url" /><key name="title" /></key></key>
+                </key>
+                <key name="logo_upload"/>
+                <key name="logo_upload_mobile"/>
+                <key name="hovrl_logo"/>
+                <key name="hovrl_footertext"/>
+                <key name="cta_custom">
+                    <key name="0">
+                        <key name="cta_text"/>
+                        <key name="cta_link" >
+                            <key name="url" />
+                            <key name="title" />
+                        </key>
+                    </key>
+                    <key name="1">
+                        <key name="cta_text"/>
+                        <key name="cta_link" >
+                            <key name="url" />
+                            <key name="title" />
+                        </key>
+                    </key>
+                    <key name="2">
+                        <key name="cta_text"/>
+                        <key name="cta_link" >
+                            <key name="url" />
+                            <key name="title" />
+                        </key>
+                    </key>
+                    <key name="3">
+                        <key name="cta_text"/>
+                        <key name="cta_link" >
+                            <key name="url" />
+                            <key name="title" />
+                        </key>
+                    </key>
+                    <key name="3">
+                        <key name="cta_text"/>
+                        <key name="cta_link" >
+                            <key name="url" />
+                            <key name="title" />
+                        </key>
+                    </key>
+                    <key name="4">
+                        <key name="cta_text"/>
+                        <key name="cta_link" >
+                            <key name="url" />
+                            <key name="title" />
+                        </key>
+                    </key>
+                    <key name="5">
+                        <key name="cta_text"/>
+                        <key name="cta_link" >
+                            <key name="url" />
+                            <key name="title" />
+                        </key>
+                    </key>
+                </key>
+                <key name="header_custom-text"/>
+                <key name="breadcrumbs_home_text"/>
+                <key name="copyright_text"/>
+            </key>
+            <key name="general_options">
+                <key name="archive_page_title"/>
+                <key name="related_posts_title"/>
+            </key>
+            <key name="options_404">
+                <key name="img_404"/>
+            </key>
+        </key>
+    </admin-texts>
+</wpml-config>

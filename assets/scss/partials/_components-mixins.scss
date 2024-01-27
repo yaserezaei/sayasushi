@@ -1,0 +1,66 @@
+// Forms Tweak
+@mixin form-control(){
+	display: block;
+	width: 100%;
+	height: 38px;
+	padding: 7px 14px;
+	font-size: 14px;
+	line-height: 1.6;
+	color: #555;
+	background-color: #efefef;
+	background-image: none;
+	border:2px solid darken($w, 13);
+	border-radius: 0;
+	box-shadow: none;
+	transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+	&:hover {border-color:darken($w, 16);}
+	&:focus {border-color:darken($w, 20); box-shadow:none;}
+}
+
+@mixin wc-select-list(){
+	& { padding-right: 25px; height: 34px; line-height: 32px; font-size: 11px; font-weight: 600; outline: none; border-radius: 3px; border: 2px solid currentColor; -webkit-appearance: none; background-image: url('assets/img/icon-select-arrow.svg'); background-repeat: no-repeat; background-size: 6px 12px; background-position: calc(100% - 10px) center; text-transform: uppercase; padding-left: 10px; color: darken($w, 30); transition:all .2s ease-out;}
+	&:hover,
+	&:focus { color: darken($w, 40);;}
+}
+
+// Buttons
+@mixin btn() {
+	font-weight: 600; font-size: 13px; padding: 14px 25px; white-space: initial; transition:all .2s ease-out;
+}
+
+// Default
+@mixin btn-default(){
+	border:2px solid currentColor; letter-spacing: 1px; background-color: transparent;
+	&:hover,
+	&:focus {color: $b; border-color:currentColor; }
+	&.btn-default--whover:hover,
+	&.btn-default--whover:focus {color: $w; border-color:currentColor;}
+}
+
+// Default White
+@mixin btn-default-white(){
+	color: rgba($w, .7); border:2px solid currentColor; letter-spacing: 1px; background-color: transparent;
+	&:hover,
+	&:focus {color: $w; border-color:currentColor; }
+}
+
+// Default Black
+@mixin btn-default-black(){
+	color: rgba($b, .7); border:2px solid currentColor; letter-spacing: 1px; background-color: transparent;
+	&:hover,
+	&:focus {color: $b; border-color:currentColor; }
+}
+
+// Primary
+@mixin btn-primary() {
+	color: $b; background-color: $c1; border-color:transparent; border-radius: 0; text-transform: uppercase; font-size: 12px;
+	&:hover,
+	&:focus {color: currentColor; background-color: darken($c1, 5);}
+}
+
+
+// Button Sizes
+@mixin btn-lg() { padding: 18px 35px; font-size: 18px; line-height: 1.3333333; border-radius: 0 }
+@mixin btn-md() { padding: 13px 25px; font-size: 14px; line-height: 1.5; border-radius: 0 }
+@mixin btn-sm() { padding: 8px 18px; font-size: 12px; line-height: 1.5; border-radius: 0 }
+@mixin btn-xs() { padding: 4px 10px; font-size: 12px; line-height: 1.5; border-radius: 0 }

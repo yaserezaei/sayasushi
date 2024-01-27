@@ -1,0 +1,49 @@
+/*! ------------------------------------------------------------------------
+* Structure
+* Defaults and stuff
+* ------------------------------------------------------------------------- */
+
+a:hover,
+a:focus {text-decoration: none;}
+
+iframe {border: 0;}
+object, embed {max-width: 100%; }
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+	line-height: 1.3;
+}
+
+/* Five Columns (12/5=2.4) */
+.col-sm-1-5, .col-xs-1-5, .col-md-1-5, .col-lg-1-5,
+.col-sm-24, .col-xs-24, .col-md-24, .col-lg-24 {position: relative; min-height: 1px; padding-left: 15px; padding-right: 15px; }
+.col-xs-1-5 {width: 20%; float: left; }
+@include rMin($sm) {
+	.col-sm-1-5, .col-sm-24 {width: 20%; float: left; }
+}
+@include rMin($md) {
+	.col-md-1-5, .col-md-24 {width: 20%; float: left; }
+}
+@include rMin($lg) {
+	.col-lg-1-5, .col-lg-24 {width: 20%; float: left; }
+}
+
+textarea {
+	max-width: 100%;
+}
+
+/* Gutter Sizes - Large */
+.row.gutter-lg { margin-right: -50px; margin-left: -50px;}
+.row.gutter-lg > [class*="col-"] {padding-right: 50px; padding-left: 50px;}
+/* Gutter Sizes - Medium */
+.row.gutter-md { margin-right: -30px; margin-left: -30px;}
+.row.gutter-md > [class*="col-"] {padding-right: 30px; padding-left: 30px;}
+/* Gutter Sizes - Small */
+.row.gutter-sm { margin-right: -15px; margin-left: -15px;}
+.row.gutter-sm > [class*="col-"] {padding-right: 15px; padding-left: 15px;}
+/* Gutter Sizes - Extra small */
+.row.gutter-xs { margin-right: -5px; margin-left: -5px;}
+.row.gutter-xs > [class*="col-"] {padding-right: 5px; padding-left: 5px;}
+/* Gutter Sizes - zero gutter */
+.row.gutter-0 { margin-right: 0; margin-left: 0;}
+.row.gutter-0 > [class*="col-"] {padding-right: 0; padding-left: 0;}

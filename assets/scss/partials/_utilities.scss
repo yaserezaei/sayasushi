@@ -1,0 +1,131 @@
+/* Text Colors */
+.u-text-custom {color:$c1 !important;}
+.u-text-white {color:$w !important;}
+.u-text-black {color:$b !important;}
+
+/* Snippet for vertically centering childs (this class should be appended to the absolute parent) */
+.u-flex-vcenter { @include flex-vertical-center; }
+
+/* css transitions - reducing transitions lines */
+.u-transition {transition: all 0.2s ease-out; }
+
+.u-ov-hidden {overflow: hidden !important;}
+.u-ov-auto {overflow: auto !important; overflow-x: hidden !important;}
+
+// Force Rounded Corners
+.u-round-corners {border-radius: 3px !important;}
+.u-square-corners {border-radius: 0 !important;}
+
+/* Font weight helpers */
+.u-fw-thin {font-weight: 300 !important;}
+.u-fw-normal {font-weight: 400 !important;}
+.u-fw-semibold {font-weight: 600 !important; }
+.u-fw-bold {font-weight: 700 !important;}
+.u-fw-extrabold {font-weight: 800 !important;}
+
+/* Font sizes helpers */
+.u-fs-smaller {font-size: 70% !important;}
+.u-fs-small {font-size: 90% !important;}
+.u-fs-big {font-size: 110% !important;}
+.u-fs-bigger {font-size: 140% !important;}
+.u-fs-large {font-size: 200% !important;}
+
+/* to uppercase */
+.u-uppercase {text-transform: uppercase;}
+
+/* Vertical alignment utilities */
+.u-v-mid {vertical-align: middle;}
+.u-v-top {vertical-align: top;}
+.u-v-bottom {vertical-align: bottom;}
+
+/* Float Clears */
+.u-clear-right {clear:right !important;}
+.u-clear-left {clear:left !important;}
+.u-clear-none {clear:none !important;}
+
+/* XXS Utilities, used for small screens -480px */
+.visible-xxs {display: none!important; }
+.hidden-xxs {display: block!important; }
+@media (max-width: 480px) {
+	.visible-xxs {display: block!important; }
+	.hidden-xxs {display: none!important; }
+}
+
+// Text Alignments
+$alignments: ('left', 'center', 'right');
+$breakpoints: (md: $lg, sm: $md, xs: $sm);
+@each $b,$c in $breakpoints{
+	@include rMax($c){
+		@each $a in $alignments {
+			.text-#{$b}-#{$a} {
+				text-align:#{$a};
+			}
+		}
+	}
+}
+
+/* Z-indexes */
+.u-zindex--1,
+.u-zindex-1,
+.u-zindex-2,
+.u-zindex-3,
+.u-zindex-5,
+.u-zindex-10 {position: relative;}
+.u-zindex--1 {z-index: -1}
+.u-zindex-1 {z-index: 1}
+.u-zindex-2 {z-index: 2}
+.u-zindex-3 {z-index: 3}
+.u-zindex-5 {z-index: 5}
+.u-zindex-10 {z-index: 10}
+
+/* Object Fit */
+.object-fit{
+	&__cover{      object-fit: cover;      }
+	&__fill{       object-fit: fill;       }
+	&__contain{    object-fit: contain;    }
+	&__none{       object-fit: none;       }
+	&__scale-down{ object-fit: scale-down; }
+}
+
+/* Small hack for icon font */
+[data-zniconfam]:before,
+[data-zniconfam] { font-style: normal; font-weight: 400; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+/* Reset line height */
+.u-reset-line-height {line-height: 1 !important;}
+
+/* Margins Bottom */
+$base_margin: 10;
+.u-mb-0 {margin-bottom: 0 !important;}
+.u-mb-1x {margin-bottom: #{$base_margin}px !important;}
+.u-mb-2x {margin-bottom: #{$base_margin*2}px !important;}
+.u-mb-4x {margin-bottom: #{$base_margin*4}px !important;}
+.u-mb-8x {margin-bottom: #{$base_margin*10}px !important;}
+/* Margins Top */
+.u-mt-0 {margin-top: 0 !important;}
+.u-mt-1x {margin-top: #{$base_margin}px !important;}
+.u-mt-2x {margin-top: #{$base_margin*2}px !important;}
+.u-mt-4x {margin-top: #{$base_margin*4}px !important;}
+.u-mt-8x {margin-top: #{$base_margin*8}px !important;}
+
+// Margin Left/Right Auto
+.u-m-auto {margin-left:auto; margin-right:auto;}
+
+
+// Responsive Image
+.u-img-responsive {display:block; max-width:100%; height:auto}
+.u-img-inline-responsive {display:inline-block; max-width:100%; height:auto}
+
+// Arrow SVG Icons
+$svgArr_size: 18px;
+.u-svgArrows {
+	cursor: pointer; display: block; vertical-align: middle; text-align: center;
+	svg {width: $svgArr_size; height: $svgArr_size; cursor: pointer; display: inline-block; vertical-align: middle;	margin-top: -1px;}
+	polyline {transition: all .15s ease-out; stroke: #141414;}
+	&:hover polyline {stroke-width: 35;}
+	&:active polyline {stroke-width: 50;}
+}
+
+
+// Reset List
+.u-reset-list {list-style: none; margin: 0; padding: 0;}

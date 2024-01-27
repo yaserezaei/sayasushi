@@ -1,0 +1,36 @@
+/*!
+Theme Name: Danny's Restaurant
+Theme URI: http://hogash.com/
+Description: A customizable theme with page builder.
+Author: Hogash
+Author URI: http://themeforest.net/user/hogash
+Version: 1.0.6
+Tags: restaurant, bar, lounge, pub, delicious, sweet, flavors,
+License: GNU General Public License
+License URI: license.txt
+Text Domain: dannys
+*/
+
+/*!
+* PLEASE DON'T ADD ANY CSS HERE !
+*
+* This file will be overwritten on updates and your CSS will be lost.
+* Instead, use Danny's Child theme's style.css.
+* Or, access Danny's Theme Options > Advanced > Custom CSS and add your CSS there.
+*
+*/
+
+@import "partials/mixins";
+@import "partials/variables";
+@import "partials/defaults";
+@import "partials/wpcore";
+@import "partials/site-header";
+@import "partials/site-breadcrumbs";
+@import "partials/components-mixins";
+@import "partials/components";
+@import "partials/_widgets";
+@import "partials/template";
+@import "partials/site-footer";
+@import "partials/magnific_popup";
+@import "partials/plugins";
+@import "partials/utilities";
