@@ -1,0 +1,355 @@
+/* Icon Box - Default element */
+
+.zn-spIconIco {
+	display: inline-block;
+	position: relative;
+	text-align: center;
+}
+
+/* Animate float */
+
+.zn-spIcon--animFloat .zn-spIconIco {
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-name: floatingAnim;
+	animation-name: floatingAnim;
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+	-webkit-animation-direction: alternate;
+	animation-direction: alternate;
+	-webkit-animation-timing-function: ease-in-out;
+	animation-timing-function: ease-in-out;
+}
+
+/* VideoBox Play button */
+
+.zn-playVideo {
+	display: block;
+	width: 80px;
+	height: 80px;
+	border: 2px solid currentColor;
+	border-radius: 50%;
+	cursor: pointer;
+	margin: 0 auto;
+	-webkit-transform: scale(0.95) translate3d(0, 0, 0);
+	transform: scale(0.95) translate3d(0, 0, 0);
+	-webkit-transition: -webkit-transform .25s ease-in-out;
+	transition: -webkit-transform .25s ease-in-out;
+	transition: transform .25s ease-in-out;
+	transition: transform .25s ease-in-out, -webkit-transform .25s ease-in-out;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	vertical-align: middle;
+	text-align: center;
+	color: white;
+	font-size: 18px; /* Sizes */
+}
+
+.zn-playVideo .dn-icon {
+	position: absolute;
+	top: calc( 50% - 0.5em);
+	line-height: 1;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+}
+
+.zn-playVideo:hover,
+.zn-playVideo:focus {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	color: white;
+}
+
+.zn-playVideo.dn-spIcon--size-xs {
+	width: 30px;
+	height: 30px;
+	font-size: 10px;
+}
+
+.zn-playVideo.dn-spIcon--size-sm {
+	width: 52px;
+	height: 52px;
+	font-size: 14px;
+}
+
+.zn-playVideo.dn-spIcon--size-md {
+	width: 80px;
+	height: 80px;
+	font-size: 18px;
+}
+
+.zn-playVideo.dn-spIcon--size-lg {
+	width: 100px;
+	height: 100px;
+	font-size: 20px;
+}
+
+.zn-playVideo.dn-spIcon--size-xl {
+	width: 120px;
+	height: 120px;
+	font-size: 26px;
+}
+
+.zn-playVideo.dn-spIcon-theme--dark,
+.zn-playVideo.dn-spIcon-theme--dark:hover,
+.zn-playVideo.dn-spIcon-theme--dark:focus {
+	color: black;
+}
+
+/* Circle Play video */
+
+.zn-circleAnim {
+	width: 108px;
+	height: 108px;
+	display: inline-block;
+	position: relative; /* Sizes */
+}
+
+.zn-circleAnim .zn-circleAnim-inner {
+	position: relative;
+	top: 0;
+	width: 100%;
+	height: 0;
+	display: block;
+	padding: 0;
+	padding-bottom: 100%;
+	margin-bottom: 0;
+}
+
+.zn-circleAnim svg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.zn-circleAnim .zn-circleAnim__circle-front,
+.zn-circleAnim .zn-circleAnim__circle-back {
+	fill: none;
+	stroke: white;
+}
+
+.zn-circleAnim .zn-circleAnim path {
+	fill: white;
+}
+
+.zn-circleAnim .zn-circleAnim__circle-front {
+	stroke-dasharray: 60 1000;
+	stroke-width: 5px;
+	stroke-opacity: .5;
+	stroke-dashoffset: 0;
+	-webkit-transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s, stroke-opacity 1s;
+	transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s, stroke-opacity 1s;
+}
+
+.zn-circleAnim:hover .zn-circleAnim__circle-front {
+	stroke-dasharray: 340;
+	stroke-width: 2px;
+	stroke-opacity: 1;
+}
+
+.zn-circleAnim.dn-spIcon--size-xs {
+	width: 30px;
+	height: 30px;
+}
+
+.zn-circleAnim.dn-spIcon--size-sm {
+	width: 52px;
+	height: 52px;
+}
+
+.zn-circleAnim.dn-spIcon--size-md {
+	width: 80px;
+	height: 80px;
+}
+
+.zn-circleAnim.dn-spIcon--size-xl {
+	width: 140px;
+	height: 140px;
+}
+
+.zn-circleAnim.dn-spIcon-theme--dark .zn-circleAnim__circle-front,
+.zn-circleAnim.dn-spIcon-theme--dark .zn-circleAnim__circle-back {
+	stroke: black;
+}
+
+.zn-circleAnim.dn-spIcon-theme--dark path {
+	fill: black;
+}
+
+.zn-mouseAnim {
+	width: 24px;
+	height: 40px;
+	border-radius: 12px;
+	background-color: rgba(255, 255, 255, 0.1);
+	-webkit-transition: background-color .2s ease-out;
+	transition: background-color .2s ease-out;
+	position: relative;
+	display: inline-block; /* Sizes */
+}
+
+.zn-mouseAnim:after {
+	position: absolute;
+	content: '';
+	width: 2px;
+	height: 9px;
+	background-color: rgba(255, 255, 255, 0.25);
+	left: 50%;
+	margin-left: -1px;
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-name: animScroll;
+	animation-name: animScroll;
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+	-webkit-animation-direction: alternate;
+	animation-direction: alternate;
+	-webkit-animation-timing-function: ease-in-out;
+	animation-timing-function: ease-in-out;
+}
+
+.zn-mouseAnim:hover {
+	background-color: rgba(255, 255, 255, 0.4);
+}
+
+.zn-mouseAnim.dn-spIcon--size-sm {
+	width: 16px;
+	height: 30px;
+}
+
+.zn-mouseAnim.dn-spIcon--size-sm:after {
+	height: 5px;
+	-webkit-animation-name: animScrollSm;
+	animation-name: animScrollSm;
+}
+
+.zn-mouseAnim.dn-spIcon--size-lg {
+	width: 30px;
+	height: 50px;
+	border-radius: 20px;
+}
+
+.zn-mouseAnim.dn-spIcon--size-lg:after {
+	margin-left: -2px;
+	border-radius: 10px;
+	width: 4px;
+	-webkit-animation-name: animScrollLg;
+	animation-name: animScrollLg;
+}
+
+.zn-mouseAnim.dn-spIcon-theme--dark {
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+.zn-mouseAnim.dn-spIcon-theme--dark::after {
+	background-color: rgba(0, 0, 0, 0.25);
+}
+
+.zn-mouseAnim.dn-spIcon-theme--dark:hover {
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+/*# sourceMappingURL=../assets/scss/css-source-maps/special_icon/style.css.map */
+
+@-webkit-keyframes floatingAnim {
+
+from {
+	-webkit-transform: translateY(-8px);
+	transform: translateY(-8px);
+}
+
+to {
+	-webkit-transform: translateY(8px);
+	transform: translateY(8px);
+}
+
+}
+
+@keyframes floatingAnim {
+
+from {
+	-webkit-transform: translateY(-8px);
+	transform: translateY(-8px);
+}
+
+to {
+	-webkit-transform: translateY(8px);
+	transform: translateY(8px);
+}
+
+}
+
+@-webkit-keyframes animScrollSm {
+
+from {
+	top: 7px;
+}
+
+to {
+	top: 18px;
+}
+
+}
+
+@keyframes animScrollSm {
+
+from {
+	top: 7px;
+}
+
+to {
+	top: 18px;
+}
+
+}
+
+@-webkit-keyframes animScroll {
+
+from {
+	top: 8px;
+}
+
+to {
+	top: 24px;
+}
+
+}
+
+@keyframes animScroll {
+
+from {
+	top: 8px;
+}
+
+to {
+	top: 24px;
+}
+
+}
+
+@-webkit-keyframes animScrollLg {
+
+from {
+	top: 8px;
+}
+
+to {
+	top: 34px;
+}
+
+}
+
+@keyframes animScrollLg {
+
+from {
+	top: 8px;
+}
+
+to {
+	top: 34px;
+}
+
+}
+

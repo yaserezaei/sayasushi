@@ -1,0 +1,136 @@
+/* ZN Section */
+
+.zn-modalSection {
+	width: 100%;
+	max-width: 1400px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 35px;
+	padding-bottom: 35px;
+	position: relative;
+}
+
+.zn-modalSection .zn-modalSectionContainer {
+	width: 100%;
+}
+
+.zn_pb_editor_enabled .zn-modalSection {
+	min-height: 160px;
+}
+
+/* Modal Overlay */
+
+.zn-modalSection-modalOverlay {
+	background: rgba(143, 43, 162, 0.5);
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+}
+
+.modal-overlay-hidden ~ .zn-modalSection-modalOverlay {
+	display: none;
+}
+
+/* Modal Info Tip */
+
+.zn-modalSection-modalInfo {
+	position: absolute;
+	top: 20px;
+	right: 30px;
+	z-index: 3;
+	width: 70px;
+	color: #000;
+	font-size: 11px;
+	font-weight: 700;
+	line-height: 1.3;
+	text-align: center;
+}
+
+.zn-modalSection-modalInfo-title {
+	display: block;
+	margin-bottom: 20px;
+}
+
+.zn-modalSection-modalInfo-tip {
+	display: block;
+	margin-bottom: 20px;
+	position: relative;
+}
+
+.zn-modalSection-modalInfo a {
+	color: #000;
+}
+
+.zn-modalSection-modalInfo a:hover,
+.zn-modalSection-modalInfo a:focus {
+	color: rgba(0, 0, 0, 0.65);
+}
+
+.zn-modalSection-modalInfo-bubble {
+	display: none;
+	width: 230px;
+	right: 100%;
+	position: absolute;
+	top: -10px;
+	font-weight: normal;
+	background: rgba(0, 0, 0, 0.5);
+	padding: 10px 10px 10px 15px;
+	line-height: 1.5;
+	text-align: start;
+	border-radius: 3px;
+	z-index: 1;
+	color: #FFF;
+}
+
+.zn-modalSection-modalInfo-bubble:after {
+	content: '';
+	position: absolute;
+	right: -10px;
+	top: 15px;
+	border: 5px solid transparent;
+	border-left-color: rgba(0, 0, 0, 0.15);
+}
+
+.zn-modalSection-modalInfo-tip:hover .zn-modalSection-modalInfo-bubble {
+	display: block;
+}
+
+.zn-modalSection-modalInfo-toggleVisible {
+	display: block;
+	cursor: pointer;
+}
+
+.modal-overlay-hidden + .zn-modalSection-modalInfo .dashicons-visibility:before {
+	content: "\f530";
+}
+
+/*# sourceMappingURL=../assets/scss/css-source-maps/section_modal/style.css.map */
+
+@media (min-width: 768px) {
+
+.zn-modalSection.zn-modalSection--contentValign-middle,
+.zn-modalSection.zn-modalSection--contentValign-bottom {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.zn-modalSection.zn-modalSection--contentValign-middle .zn-modalSectionContainer {
+	-webkit-align-self: center;
+	-ms-flex-item-align: center;
+	-ms-grid-row-align: center;
+	align-self: center;
+}
+
+.zn-modalSection.zn-modalSection--contentValign-bottom .zn-modalSectionContainer {
+	-webkit-align-self: flex-end;
+	-ms-flex-item-align: end;
+	align-self: flex-end;
+}
+
+}
+

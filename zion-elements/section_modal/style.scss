@@ -1,0 +1,35 @@
+/* ZN Section */
+.zn-modalSection {
+	width: 100%; max-width: 1400px; margin-left: auto; margin-right: auto;
+	padding-top:35px; padding-bottom: 35px; position: relative;
+	@media (min-width:768px){
+		&.zn-modalSection--contentValign-middle,
+		&.zn-modalSection--contentValign-bottom {display: flex;}
+		&.zn-modalSection--contentValign-middle .zn-modalSectionContainer {align-self: center;}
+		&.zn-modalSection--contentValign-bottom .zn-modalSectionContainer {align-self: flex-end;}
+	}
+	.zn-modalSectionContainer {
+		width: 100%;
+	}
+	.zn_pb_editor_enabled & {min-height:160px;}
+}
+
+/* Modal Overlay */
+.zn-modalSection-modalOverlay {
+	background:rgba(143, 43, 162, 0.5); position: absolute; left: 0; top: 0; width: 100%;height: 100%; z-index: 2;
+	.modal-overlay-hidden ~ & {display: none;}
+}
+/* Modal Info Tip */
+.zn-modalSection-modalInfo {
+	position: absolute; top: 20px; right: 30px; z-index: 3; width: 70px; color: #000; font-size: 11px; font-weight: 700; line-height: 1.3; text-align: center;
+	&-title {display: block; margin-bottom: 20px;}
+	&-tip {display: block; margin-bottom: 20px; position: relative;}
+	& a {color:#000;}
+	& a:hover,
+	& a:focus {color:rgba(0,0,0,0.65);}
+	&-bubble {display: none; width: 230px; right: 100%; position: absolute; top: -10px; font-weight: normal; background: rgba(0, 0, 0, 0.5); padding: 10px 10px 10px 15px; line-height: 1.5; text-align: start; border-radius: 3px; z-index: 1; color: #FFF;}
+	&-bubble:after {content:''; position:absolute; right:-10px; top:15px; border:5px solid transparent; border-left-color:rgba(0, 0, 0, 0.15);}
+	&-tip:hover &-bubble {display: block;}
+	&-toggleVisible {display: block; cursor: pointer;}
+	.modal-overlay-hidden + & .dashicons-visibility:before {content: "\f530";}
+}

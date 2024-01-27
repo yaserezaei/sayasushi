@@ -1,0 +1,37 @@
+.zn-priceList {
+	& > ul {list-style: none; margin: 0; padding: 0;}
+	& > ul > li {margin-top: 5px; margin-bottom: 5px; position: relative;}
+}
+.zn-priceList-itemMain {margin-bottom: 10px;}
+
+.zn-priceList-itemTitle,
+.zn-priceList-itemPrice {font-size: 14px; color: #333333; line-height: 24px; font-weight: 700; margin: 0;}
+.zn-priceList-itemPrice {color: #cc9933; text-align: right;}
+.zn-priceList-itemDesc {font-size: 12px; color: #333; }
+.zn-priceList-itemLeft {float:left; margin-right:20px; max-width:38px; max-height:38px;}
+.zn-priceList-itemLeft + .zn-priceList-itemRight {float:left; width:calc(100% - 58px); }
+.is-featured .zn-priceList-itemLeft {border-left-width:5px; border-left-style:solid;}
+
+.zn-priceList-imgTooltip {position: absolute; bottom: calc(100% + 20px); left: 0; border: 1px solid #cccccc; max-width: 275px; max-height: 275px; background: #fff; padding: 3px; box-shadow: 0 12px 42px rgba(0,0,0,0.30); transition: all .15s ease-out; transform: translateY(20px) scale(.95); transform-origin:50% 100%; opacity:0; visibility: hidden; z-index: 99;
+}
+.zn-priceList > ul > li:hover .zn-priceList-imgTooltip {transform: translateY(0) scale(1); opacity:1; visibility: visible;}
+.zn-priceList-imgTooltip:after {content:''; position: absolute; left: 50px; top: 100%; border-top: 15px solid #fff; border-right: 15px solid transparent; }
+
+/* Classic Dots */
+.zn-priceList-dash--classic {
+	.zn-priceList-itemMain {display:flex;}
+	.zn-priceList-itemTitle,
+	.zn-priceList-itemPrice {flex: 0 1 auto;}
+	.zn-priceList-dottedSeparator {flex: 1 1 auto; margin-left: 3px; margin-right: 5px; margin-bottom: calc((24px - 14px) / 2);}
+}
+
+.zn-priceList-dash--separator {
+	 > ul > li {padding-bottom: 10px;}
+	.zn-priceList-itemTitle {float: left;}
+	.zn-priceList-itemPrice {float: right;}
+	.zn-priceList-dottedSeparator {display: none;}
+}
+
+/* Dots color */
+.zn-priceList-dash--classic .zn-priceList-dottedSeparator,
+.zn-priceList-dash--separator > ul > li {background-image: -webkit-radial-gradient(circle closest-side, rgba(0,0,0,.2) 99%, transparent 1%); background-image: radial-gradient(circle closest-side, rgba(0,0,0,.2) 99%, transparent 1%); background-position: bottom; background-size: 5px 3px; background-repeat: repeat-x;}

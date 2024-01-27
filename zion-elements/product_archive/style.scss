@@ -1,0 +1,13 @@
+.zn-wcArchive-ajax {
+	transition: opacity .5s ease-out; opacity: 1;
+	&.zn-wcArchive-ajax--loading {
+		opacity:.7; transition: opacity .2s ease-out;
+		&::after {
+			content:''; position: absolute; top:calc(50% - 30px); left:calc(50% - 30px); width: 60px; height: 60px; border:2px solid rgba(white, .4); border-top-color:white; border-radius: 50%; animation: prodArchiveLoaderSpinner 1.4s linear infinite; box-shadow: 0 0 35px 15px rgba(0, 0, 0, 0.15);
+		}
+	}
+}
+@keyframes prodArchiveLoaderSpinner {
+  0% {transform: rotate(0deg); }
+  100% {transform: rotate(360deg); }
+}

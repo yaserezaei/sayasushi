@@ -1,0 +1,515 @@
+.zn-css3PanelsEl {
+	position: relative;
+}
+
+.zn-css3Panels {
+	overflow: hidden;
+	position: relative;
+	z-index: 0;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	-webkit-flex-wrap: nowrap;
+	-ms-flex-wrap: nowrap;
+	flex-wrap: nowrap; /* Panels */ /* Inner panel */
+}
+
+.zn-css3Panels.zn-css3Panel--hasBorder .zn-css3Panel:hover .zn-css3Panel-inner {
+	box-shadow: 0 0 0 2px #FFF, 0 0 50px 20px rgba(0, 0, 0, 0.25);
+}
+
+.zn-css3Panels.zn-css3Panel--hasBorder.is-dark .zn-css3Panel:hover .zn-css3Panel-inner {
+	box-shadow: 0 0 0 2px #000, 0 0 50px 20px rgba(0, 0, 0, 0.25);
+}
+
+.zn-css3Panels.zn-css3Panels--resize .zn-css3Panel {
+	will-change: transform;
+	-webkit-transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+	transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.zn-css3Panels.zn-css3Panels--resize.zn-css3Panels--speed-fast .zn-css3Panel {
+	-webkit-transition-duration: .2s;
+	transition-duration: .2s;
+}
+
+.zn-css3Panels.zn-css3Panels--resize.zn-css3Panels--speed-normal .zn-css3Panel {
+	-webkit-transition-duration: .5s;
+	transition-duration: .5s;
+}
+
+.zn-css3Panels.zn-css3Panels--resize.zn-css3Panels--speed-slow .zn-css3Panel {
+	-webkit-transition-duration: 1s;
+	transition-duration: 1s;
+}
+
+.zn-css3Panels.zn-css3Panels--resize.zn-css3Panels--resize--dist-short .zn-css3Panel:hover {
+	-webkit-box-flex: 1.1;
+	-webkit-flex: 1.1;
+	-ms-flex: 1.1;
+	flex: 1.1;
+}
+
+.zn-css3Panels.zn-css3Panels--resize.zn-css3Panels--resize--dist-normal .zn-css3Panel:hover {
+	-webkit-box-flex: 1.3;
+	-webkit-flex: 1.3;
+	-ms-flex: 1.3;
+	flex: 1.3;
+}
+
+.zn-css3Panels.zn-css3Panels--resize.zn-css3Panels--resize--dist-large .zn-css3Panel:hover {
+	-webkit-box-flex: 1.5;
+	-webkit-flex: 1.5;
+	-ms-flex: 1.5;
+	flex: 1.5;
+}
+
+.zn-css3Panels.zn-css3Panels--resize.zn-css3Panels--resize--dist-double .zn-css3Panel:hover {
+	-webkit-box-flex: 2;
+	-webkit-flex: 2;
+	-ms-flex: 2;
+	flex: 2;
+}
+
+.zn-css3Panels.zn-css3Panels--resize .zn-css3Panel-inner {
+	-webkit-transition: box-shadow .2s ease-out;
+	transition: box-shadow .2s ease-out;
+}
+
+.zn-css3Panels.zn-css3Panels--resize .zn-css3Panel:hover {
+	-webkit-box-flex: 1.3;
+	-webkit-flex: 1.3;
+	-ms-flex: 1.3;
+	flex: 1.3;
+}
+
+.zn-css3Panels .zn-css3Panel {
+	float: left;
+	position: relative;
+	z-index: 0;
+	min-height: 150px;
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	margin: 0 -1px;
+}
+
+.zn-css3Panels .zn-css3Panel:hover {
+	z-index: 1;
+}
+
+.zn-css3Panels .zn-css3Panel:hover .zn-css3Panel-inner {
+	box-shadow: 0 0 50px 20px rgba(0, 0, 0, 0.25);
+}
+
+.zn-css3Panels .zn-css3Panel-inner {
+	position: relative;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	overflow: hidden;
+	-webkit-transition: box-shadow .2s ease-out;
+	transition: box-shadow .2s ease-out;
+	height: 100%;
+	position: absolute;
+	width: 100%;
+}
+
+.zn-css3Panels.zn-css3Panel--hasSkew .zn-css3Panel-inner {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.zn-css3Panels.zn-css3Panel--hasBorder .zn-css3Panel-inner {
+	box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.7);
+}
+
+.zn-css3Panels.zn-css3Panel--hasBorder.is-dark .zn-css3Panel-inner {
+	box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.7);
+}
+
+/* Image */
+
+.zn-css3Panel-mainImage-wrapper {
+	position: relative;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	height: 100%;
+}
+
+.zn-css3Panel-mainImage {
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	right: -2px;
+	bottom: -2px;
+}
+
+.zn-css3Panel-mainImage.zn-css3Panel-mainImage--noStretch {
+	text-align: center;
+}
+
+.zn-css3Panel-mainImage.zn-css3Panel-mainImage--noStretch .zn-css3Panel-mainImage-effect {
+	-webkit-transform: translateY(-100%);
+	transform: translateY(-100%);
+}
+
+.zn-css3Panel-mainImage-img {
+	height: 100%;
+	width: auto;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-transition: .2s ease-out;
+	transition: .2s ease-out;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.zn-css3Panel-mainImage--stretch .zn-css3Panel-mainImage-img {
+	position: absolute;
+	width: 100%;
+}
+
+/* Image overlay */
+
+.zn-css3Panel-overlay {
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	-webkit-transition: opacity .15s ease-out;
+	transition: opacity .15s ease-out;
+}
+
+.zn-css3Panel:hover .zn-css3Panel-overlay {
+	opacity: 0;
+}
+
+.zn-css3Panel-overlay.zn-css3Panel-overlay--gradient {
+	opacity: 0.5;
+	top: 50%;
+	background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, black 100%);
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, black 100%);
+}
+
+/* Image animations */
+
+.zn-css3Panel-mainImage-img.anim--grayscale {
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	-webkit-transition: opacity .15s ease-out;
+	transition: opacity .15s ease-out;
+}
+
+.zn-css3Panel:hover .zn-css3Panel-mainImage-img.anim--grayscale {
+	opacity: 0;
+}
+
+.zn-css3Panel-mainImage-img.anim--blur {
+	-webkit-filter: blur(9px);
+	filter: blur(9px);
+	-webkit-transition: opacity .15s ease-out;
+	transition: opacity .15s ease-out;
+}
+
+.zn-css3Panel:hover .zn-css3Panel-mainImage-img.anim--blur {
+	opacity: 0;
+}
+
+.zn-css3Panel-mainImage-img.anim--grayscale.anim--blur {
+	-webkit-filter: grayscale(100%) blur(9px);
+	filter: grayscale(100%) blur(9px);
+	-webkit-transition: opacity .15s ease-out;
+	transition: opacity .15s ease-out;
+}
+
+.zn-css3Panel:hover .zn-css3Panel-mainImage-img.anim--grayscale.anim--blur {
+	opacity: 0;
+}
+
+.zn-css3Panel-caption {
+	position: absolute;
+	bottom: 90px;
+	color: #FFFFFF;
+	z-index: 1;
+	width: 100%;
+}
+
+.zn-css3Panel--hasSkew .zn-css3Panel-caption.text-right {
+	padding-right: 50px;
+}
+
+.zn-css3Panel--hasSkew .zn-css3Panel-caption.text-left {
+	padding-left: 50px;
+}
+
+.zn-css3Panel-caption.zn-css3Panel-caption--middle {
+	bottom: auto;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+/* Fading in Caption */
+
+.zn-css3Panel-animatedCaption--fadein .zn-css3Panel-title,
+.zn-css3Panel-animatedCaption--fadein .zn-css3Panel-text {
+	opacity: 0;
+	visibility: hidden;
+	-webkit-transition: opacity .15s ease-out, visibility .15s ease-out;
+	transition: opacity .15s ease-out, visibility .15s ease-out;
+}
+
+.zn-css3Panel-animatedCaption--fadein .zn-css3Panel:hover .zn-css3Panel-title,
+.zn-css3Panel-animatedCaption--fadein .zn-css3Panel:hover .zn-css3Panel-text {
+	opacity: 1;
+	visibility: visible;
+}
+
+/* Fading Out Caption */
+
+.zn-css3Panel-animatedCaption--fadeout .zn-css3Panel-title,
+.zn-css3Panel-animatedCaption--fadeout .zn-css3Panel-text {
+	opacity: 1;
+	visibility: visible;
+	-webkit-transition: opacity .15s ease-out, visibility .15s ease-out;
+	transition: opacity .15s ease-out, visibility .15s ease-out;
+}
+
+.zn-css3Panel-animatedCaption--fadeout .zn-css3Panel:hover .zn-css3Panel-title,
+.zn-css3Panel-animatedCaption--fadeout .zn-css3Panel:hover .zn-css3Panel-text {
+	opacity: 0;
+	visibility: hidden;
+}
+
+/* Slide in Caption */
+
+.zn-css3Panel-animatedCaption--slidein .zn-css3Panel-title,
+.zn-css3Panel-animatedCaption--slidein .zn-css3Panel-text {
+	opacity: 0;
+	visibility: hidden;
+	-webkit-transform: translateX(200px);
+	transform: translateX(200px);
+	-webkit-transition: opacity .15s ease-out, visibility .15s ease-out, -webkit-transform .15s ease-out;
+	transition: opacity .15s ease-out, visibility .15s ease-out, -webkit-transform .15s ease-out;
+	transition: opacity .15s ease-out, visibility .15s ease-out, transform .15s ease-out;
+	transition: opacity .15s ease-out, visibility .15s ease-out, transform .15s ease-out, -webkit-transform .15s ease-out;
+}
+
+.zn-css3Panel-animatedCaption--slidein .zn-css3Panel:hover .zn-css3Panel-title,
+.zn-css3Panel-animatedCaption--slidein .zn-css3Panel:hover .zn-css3Panel-text {
+	opacity: 1;
+	visibility: visible;
+	-webkit-transform: translateX(0);
+	transform: translateX(0);
+}
+
+/* Slide Out Caption */
+
+.zn-css3Panel-animatedCaption--slideout .zn-css3Panel-title,
+.zn-css3Panel-animatedCaption--slideout .zn-css3Panel-text {
+	opacity: 1;
+	visibility: visible;
+	-webkit-transform: translateX(0);
+	transform: translateX(0);
+	-webkit-transition: opacity .15s ease-out, visibility .15s ease-out, -webkit-transform .15s ease-out;
+	transition: opacity .15s ease-out, visibility .15s ease-out, -webkit-transform .15s ease-out;
+	transition: opacity .15s ease-out, visibility .15s ease-out, transform .15s ease-out;
+	transition: opacity .15s ease-out, visibility .15s ease-out, transform .15s ease-out, -webkit-transform .15s ease-out;
+}
+
+.zn-css3Panel-animatedCaption--slideout .zn-css3Panel:hover .zn-css3Panel-title,
+.zn-css3Panel-animatedCaption--slideout .zn-css3Panel:hover .zn-css3Panel-text {
+	opacity: 0;
+	visibility: hidden;
+	-webkit-transform: translateX(200px);
+	transform: translateX(200px);
+}
+
+.zn-css3Panel-animatedCaption--slideout .zn-css3Panel:hover .zn-css3Panel-overlay {
+	opacity: 0;
+}
+
+/* Delay individually */
+
+.zn-css3Panels[class*="zn-css3Panel-animatedCaption"] .zn-css3Panel-title {
+	-webkit-transition-delay: .0s;
+	transition-delay: .0s;
+}
+
+.zn-css3Panels[class*="zn-css3Panel-animatedCaption"] .zn-css3Panel-text {
+	-webkit-transition-delay: .2s;
+	transition-delay: .2s;
+}
+
+.zn-css3Panels[class*="zn-css3Panel-animatedCaption"] .zn-css3Panel-overlay {
+	-webkit-transition-delay: .1s;
+	transition-delay: .1s;
+}
+
+/* Css Title */
+
+.zn-css3Panel-title {
+	position: relative;
+	font-size: 28px;
+	line-height: 1.3;
+	font-weight: 600;
+	color: #FFF;
+	margin: 0 0 20px;
+	text-align: center;
+}
+
+.zn-css3Panel--hasSkew .zn-css3Panel:last-child .zn-css3Panel-title {
+	margin-right: 10px;
+}
+
+/* Panel text*/
+
+.zn-css3Panel-text {
+	font-size: 16px;
+	color: #fff;
+	margin: 0;
+	line-height: 1.6;
+	text-align: center;
+}
+
+/*# sourceMappingURL=../assets/scss/css-source-maps/css3_panels/style.css.map */
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+.zn-css3Panels.zn-css3Panels--resize .zn-css3Panel:hover {
+	-webkit-box-flex: 2.2;
+	-webkit-flex: 2.2;
+	-ms-flex: 2.2;
+	flex: 2.2;
+}
+
+}
+
+@media (min-width: 768px) {
+
+.zn-css3Panel--hasSkew .zn-css3Panel:first-child .zn-css3Panel-caption {
+	padding-left: 90px;
+	padding-right: 80px;
+}
+
+.zn-css3Panel--hasSkew .zn-css3Panel:last-child .zn-css3Panel-caption {
+	padding-left: 80px;
+	padding-right: 90px;
+}
+
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+
+.zn-css3Panels.zn-css3Panels--resize .zn-css3Panel:hover {
+	-webkit-box-flex: 2;
+	-webkit-flex: 2;
+	-ms-flex: 2;
+	flex: 2;
+}
+
+}
+
+@media (min-width: 1200px) {
+
+.zn-css3Panels.zn-css3Panel--hasSkew {
+	margin-left: -62px;
+	margin-right: -62px;
+}
+
+.zn-css3Panels.zn-css3Panel--hasSkew .zn-css3Panel-inner {
+	-webkit-transform: skewX(-10deg);
+	transform: skewX(-10deg);
+}
+
+.zn-css3Panel--hasSkew .zn-css3Panel-mainImage-wrapper {
+	margin-left: -60px;
+	margin-right: -60px;
+	-webkit-transform: skewX(10deg);
+	transform: skewX(10deg);
+}
+
+}
+
+@media (max-width: 1440px) {
+
+.zn-css3Panel-title {
+	font-size: 18px;
+	word-break: break-word;
+}
+
+.zn-css3Panel-text {
+	font-size: 14px;
+}
+
+}
+
+@media (max-width: 1199px) {
+
+.zn-css3Panel-caption {
+	padding-left: 20px;
+	padding-right: 20px;
+	text-align: center;
+}
+
+}
+
+@media (max-width: 767px) {
+
+.zn-css3Panels {
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+
+.zn-css3Panels .zn-css3Panel {
+	float: left;
+	overflow: hidden;
+	position: relative;
+	z-index: 0;
+	box-shadow: 0 0 0 3px #fff;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+	min-height: 300px;
+}
+
+.zn-css3Panels .zn-css3Panel-inner {
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+.zn-css3Panel-mainImage-img {
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+}
+
+.zn-css3Panel-caption {
+	bottom: 20px;
+}
+
+}
+
